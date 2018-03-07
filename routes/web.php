@@ -11,8 +11,9 @@
 |
 */
 
-Route::get('/', function () {
+Route::get('/', 'IndexController@index');
+
+Route::get('/login', function () {
     return view('welcome');
 });
-
 
