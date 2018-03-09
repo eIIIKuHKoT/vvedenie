@@ -16,5 +16,3 @@ Route::get('/', 'IndexController@index');
 Route::get('/admin', 'DashboardController@index');
 
 Auth::routes();
-
-Route::get('/admin', 'DashboardController@index');
