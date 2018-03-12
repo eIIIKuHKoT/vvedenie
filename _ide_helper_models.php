@@ -9,11 +9,7 @@
 
 
 namespace App{
-/**
- * App\User
- *
- * @property-read \Illuminate\Notifications\DatabaseNotificationCollection|\Illuminate\Notifications\DatabaseNotification[] $notifications
- */
+
 	class User extends \Eloquent {}
 }
 

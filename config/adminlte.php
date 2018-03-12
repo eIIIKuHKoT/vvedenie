@@ -13,7 +13,7 @@ return [
     |
     */
 
-    'title' => 'AdminLTE 2',
+    'title' => 'Admin panel',
 
     'title_prefix' => '',
 
@@ -30,9 +30,9 @@ return [
     |
     */
 
-    'logo' => '<b>Admin</b>LTE',
+    'logo' => '<b>Admin</b> panel',
 
-    'logo_mini' => '<b>A</b>LT',
+    'logo_mini' => '<b>A</b>',
 
     /*
     |--------------------------------------------------------------------------
@@ -85,7 +85,7 @@ return [
     |
     */
 
-    'dashboard_url' => 'home',
+    'dashboard_url' => 'admin',
 
     'logout_url' => 'logout',
 
@@ -112,14 +112,17 @@ return [
         [
             'text' => 'Blog',
             'url'  => 'admin/blog',
-            'can'  => 'manage-blog',
+            'icon' => 'file',
         ],
         [
-            'text'        => 'Pages',
-            'url'         => 'admin/pages',
-            'icon'        => 'file',
-            'label'       => 4,
-            'label_color' => 'success',
+            'text'        => 'Users',
+            'url'         => 'admin/users',
+            'icon'        => 'users',
+        ],
+        [
+            'text'        => 'Photo album',
+            'url'         => 'admin/photos',
+            'icon'        => 'users',
         ],
         'ACCOUNT SETTINGS',
         [
@@ -132,7 +135,7 @@ return [
             'url'  => 'admin/settings',
             'icon' => 'lock',
         ],
-        [
+        /*[
             'text'    => 'Multilevel',
             'icon'    => 'share',
             'submenu' => [
@@ -169,8 +172,8 @@ return [
                     'url'  => '#',
                 ],
             ],
-        ],
-        'LABELS',
+        ],*/
+        /*'LABELS',
         [
             'text'       => 'Important',
             'icon_color' => 'red',
@@ -182,7 +185,7 @@ return [
         [
             'text'       => 'Information',
             'icon_color' => 'aqua',
-        ],
+        ],*/
     ],
 
     /*
