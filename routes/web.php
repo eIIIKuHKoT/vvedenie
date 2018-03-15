@@ -16,10 +16,11 @@ Route::get('/', 'IndexController@index');
 Auth::routes();
 
 
-Route::resource('users', 'UserController');
+Route::resource('/admin/user', 'UserController');
 
 /*dashboard */
 Route::get('/admin', 'DashboardController@index');
-Route::get('/admin/users', 'DashboardController@users');
+
+/*Route::get('/admin/users', 'DashboardController@users');*/
 
 

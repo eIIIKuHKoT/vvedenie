@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Routing\Controller;
+use App\Http\Requests\StoreUser;
 
 class UserController extends Controller
 {
@@ -13,14 +14,22 @@ class UserController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+    public function __construct()
+    {
+        $this->middleware('auth');
+
+    }
+
     public function index()
     {
-        $data = [];
-        $users = User::all()->toArray();
-        foreach ($users as $user){
-            $data[] = array_values($user);
-        }
-        return response()->json($data);
+
+        $users = User::all();
+
+        return view('dashboard.users',[
+            'users' => $users,
+            'listing_cols' => array_keys($users->toArray()[0])
+        ]);
+        //return response()->json($data);
     }
 
     /**
@@ -30,7 +39,7 @@ class UserController extends Controller
      */
     public function create()
     {
-        //
+        return view('dashboard.user');
     }
 
     /**
@@ -39,7 +48,7 @@ class UserController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(StoreUser $request)
     {
         //
     }
@@ -63,7 +72,7 @@ class UserController extends Controller
      */
     public function edit(User $user)
     {
-        //
+        var_dump($user);
     }
 
     /**
@@ -86,6 +95,6 @@ class UserController extends Controller
      */
     public function destroy(User $user)
     {
-        //
+        response('1');
     }
 }

@@ -20,10 +20,23 @@
                             @foreach( $listing_cols as $col )
                                 <th>{{ucfirst($col) }}</th>
                             @endforeach
-                          {{--      <th class="text-right" width="10%">Actions</th>--}}
+                            <th class="text-right" width="10%">Actions</th>
                         </tr>
                         </thead>
-                        <tbody></tbody>
+                        <tbody>
+                        @foreach( $users as $user )
+                            <tr>
+
+                                <td>{{$user->id}}</td>
+                                <td>{{$user->name}}</td>
+                                <td>{{$user->email}}</td>
+                                <td>{{$user->created_at}}</td>
+                                <td>{{$user->updated_at}}</td>
+                                <td>$320,800</td>
+
+                            </tr>
+                        @endforeach
+                        </tbody>
                     </table>
                 </div>
             </div>
@@ -34,7 +47,7 @@
 @section('js')
     <script>
         $("#example1").DataTable({
-            processing: true,
+            /*processing: true,
             "ajax": {
                 "url": "/users",
                 "dataSrc": ""
@@ -46,11 +59,11 @@
             },
             columnDefs: [
                 {targets: [0], visible: false},
-               /* {orderable: false, targets: [5]},*/
-                /*{className: "text-right", "targets": [6]}*/
-            ],
+               /!* {orderable: false, targets: [5]},*!/
+                /!*{className: "text-right", "targets": [6]}*!/
+            ],*/
         });
-        $('div.dataTables_filter input').addClass('form-control input-sm');
+
     </script>
 @stop
 
