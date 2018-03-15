@@ -1,16 +1,9 @@
-<!--
-	Author: W3layouts
-	Author URL: http://w3layouts.com
-	License: Creative Commons Attribution 3.0 Unported
-	License URL: http://creativecommons.org/licenses/by/3.0/
--->
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <!-- Meta tags -->
-    <title>Edumate a Education Category Flat Bootstrap Responsive Website | Home :: w3layouts</title>
-    <meta name="keywords" content="Edumate a Education Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template,
-	Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
+    <title>Дитячий наметовий табір під Києвом</title>
+    <meta name="keywords" content="" />
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -34,7 +27,7 @@
 <div class="agile-banner w3lshome" id="home">
     <div class="navbar navbar-default navbar-fixed-top w3ls-navbar">
         <div class= "container brand1">
-            <a href="#" class="navbar-brand w3-logo">Edumate</a>
+            <a href="#" class="navbar-brand w3-logo">Vvedenie Camp</a>
 
             <button class="navbar-toggle" data-toggle="collapse" data-target=".navHeaderCollapse">
                 <span class="icon-bar"></span>
@@ -44,21 +37,21 @@
             <!-- navbar collapse -->
             <div class="collapse navbar-collapse navHeaderCollapse">
                 <ul class="nav navbar-nav navbar-right w3ls-nav">
-                    <li><a class="scroll" href="#home">Home</a></li>
-                    <li><a class="scroll" href="#about">About</a></li>
-                    <li><a class="scroll" href="#team">Team</a></li>
-                    <li><a class="scroll" href="#gallery">Gallery</a></li>
-                    <li class="dropdown">
+                   {{-- <li><a class="scroll" href="#home">Home</a></li>--}}
+                    <li><a class="scroll" href="#about">Про нас</a></li>
+                    <li><a class="scroll" href="#team">Команда</a></li>
+                    <li><a class="scroll" href="#gallery">Фото</a></li>
+                    {{--<li class="dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown">Departments <b class="caret"></b></a>
                         <ul class="dropdown-menu">
                             <li><a href="#service">Arts</a></li>
                             <li><a href="#service">Science</a></li>
                             <li><a href="#service">Commerce</a></li>
                         </ul>
-                    </li>
-                    <li><a class="scroll" href="#stats">Stats</a></li>
-                    <li><a class="scroll" href="#blog">Blog</a></li>
-                    <li><a class="scroll" href="#contact-form">Contact</a></li>
+                    </li>--}}
+                    <{{--li><a class="scroll" href="#stats">Stats</a></li>--}}
+                    <li><a class="scroll" href="#blog">Новини</a></li>
+                    <li><a class="scroll" href="#contact-form">Контактна інформація</a></li>
                 </ul>
             </div>
         </div>
@@ -230,7 +223,7 @@
 </div>
 <!-- Our Services -->
 <!-- our stats -->
-<div class="agile-stats" id="stats">
+{{--<div class="agile-stats" id="stats">
     <h3 class="center">Our Stats</h3>
     <div class="container">
         <div class="stats1">
@@ -258,7 +251,7 @@
             </div>
         </div>
     </div>
-</div>
+</div>--}}
 <!-- //our stats -->
 <!-- gallery -->
 <div class="gallery" id="gallery">

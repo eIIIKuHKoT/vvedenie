@@ -15,9 +15,11 @@ Route::get('/', 'IndexController@index');
 
 Auth::routes();
 
+
+Route::resource('users', 'UserController');
+
 /*dashboard */
 Route::get('/admin', 'DashboardController@index');
-Route::get('/admin/user', 'DashboardController@user');
-Auth::routes();
+Route::get('/admin/users', 'DashboardController@users');
 
-Route::get('/home', 'HomeController@index')->name('home');
+

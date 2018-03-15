@@ -110,6 +110,12 @@ return [
     'menu' => [
         'MAIN NAVIGATION',
         [
+            'text'        => 'SEO',
+            'url'         => 'admin/seo',
+            'icon'        => 'users',
+
+        ],
+        [
             'text' => 'Blog',
             'url'  => 'admin/blog',
             'icon' => 'file',
