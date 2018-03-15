@@ -52,7 +52,7 @@
                                 <input type="password" name="password" class="form-control" id="exampleInputPassword1"
                                        placeholder="Password">
                                 <label for="exampleInputConfirmPassword1">{{--Confirm password--}}</label>
-                                <input type="password" name="password-confirmation" class="form-control" id="exampleInputConfirmPassword1"
+                                <input type="password" name="password_confirmation" class="form-control" id="exampleInputConfirmPassword1"
                                        placeholder="Confirm Password">
                             </div>
                         </div>
