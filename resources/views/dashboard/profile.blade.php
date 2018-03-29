@@ -30,7 +30,7 @@
             @endif
             <!-- /.box-header -->
                 <!-- form start -->
-                <form role="form" method="post" action="{{action('UserController@store')}}">
+                <form role="form" method="post" action="{{action('UserController@update', ['user'=>$user->id])}}">
                     {{ csrf_field() }}
                     {{ method_field('PUT') }}
                     <div class="box-body">

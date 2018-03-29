@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\UpdateUser;
 use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Routing\Controller;
@@ -86,13 +87,20 @@ class UserController extends Controller
     /**
      * Update the specified resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
+     * @param  \App\Http\Requests\UpdateUser  $request
      * @param  \App\Models\User  $user
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, User $user)
+    public function update(UpdateUser $request, User $user)
     {
-        //
+
+        $user->update([
+            'name' => $request->name,
+            'email' => $request->email,
+            'password' => $request->getPassword() ? bcrypt($request->password) : $user->password
+        ]);
+
+        return redirect(redirect()->getUrlGenerator()->previous());
     }
 
     /**
