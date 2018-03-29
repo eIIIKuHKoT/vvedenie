@@ -1,5 +1,5 @@
 <?php
-
+use Illuminate\Support\Facades\Auth;
 return [
 
     /*
@@ -122,7 +122,7 @@ return [
         ],
         [
             'text'        => 'Users',
-            'url'         => 'admin/users',
+            'url'         => 'admin/user',
             'icon'        => 'users',
         ],
         [
@@ -133,7 +133,7 @@ return [
         'ACCOUNT SETTINGS',
         [
             'text' => 'Profile',
-            'url'  => 'admin/settings',
+            'route'  => 'admin.profile',
             'icon' => 'user',
         ],
         [
@@ -190,7 +190,7 @@ return [
         ],
         [
             'text'       => 'Information',
-            'icon_color' => 'aqua',
+            'icon_color' => 'aqua',ё
         ],*/
     ],
 

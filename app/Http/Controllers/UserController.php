@@ -78,7 +78,9 @@ class UserController extends Controller
      */
     public function edit(User $user)
     {
-        var_dump($user);
+        return view('dashboard.profile',[
+            'user' => $user
+        ]);
     }
 
     /**

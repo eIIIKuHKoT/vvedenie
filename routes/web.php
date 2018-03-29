@@ -13,14 +13,12 @@
 
 Route::get('/', 'IndexController@index');
 
-Auth::routes();
-
-
 Route::resource('/admin/user', 'UserController');
 
 /*dashboard */
 Route::get('/admin', 'DashboardController@index');
-
+Route::get('/admin/profile', 'DashboardController@profile')->name('admin.profile');
 /*Route::get('/admin/users', 'DashboardController@users');*/
 
 
+Auth::routes();
