@@ -7,6 +7,7 @@ use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Routing\Controller;
 use App\Http\Requests\StoreUser;
+use Mockery\Exception;
 
 class UserController extends Controller
 {
@@ -26,7 +27,7 @@ class UserController extends Controller
 
         $users = User::all();
 
-        return view('dashboard.users',[
+        return view('dashboard.users.users',[
             'users' => $users,
             'listing_cols' => array_keys($users->toArray()[0])
         ]);
@@ -40,7 +41,7 @@ class UserController extends Controller
      */
     public function create()
     {
-        return view('dashboard.user');
+        return view('dashboard.users.user');
     }
 
     /**
@@ -68,7 +69,7 @@ class UserController extends Controller
      */
     public function show(User $user)
     {
-        //
+        return response($user->toJson());
     }
 
     /**
@@ -111,6 +112,11 @@ class UserController extends Controller
      */
     public function destroy(User $user)
     {
-        response('1');
+        try {
+            $user->delete();
+            return response('success', 200);
+        } catch (Exception $e) {
+            return response($e->getMessage(), 500);
+        }
     }
 }

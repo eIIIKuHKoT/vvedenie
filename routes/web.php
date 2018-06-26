@@ -14,6 +14,8 @@
 Route::get('/', 'IndexController@index');
 
 Route::resource('/admin/user', 'UserController');
+Route::resource('/admin/team-members', 'TeamMemberController');
+
 
 /*dashboard */
 Route::get('/admin', 'DashboardController@index');

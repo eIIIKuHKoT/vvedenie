@@ -121,6 +121,11 @@ return [
             'icon' => 'file',
         ],
         [
+            'text' => 'Team Members',
+            'url'  => 'admin/team-members',
+            'icon' => 'users',
+        ],
+        [
             'text'        => 'Users',
             'url'         => 'admin/user',
             'icon'        => 'users',
